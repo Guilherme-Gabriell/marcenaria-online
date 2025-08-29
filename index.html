@@ -2,171 +2,679 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mobile Móveis Planejados — Estilos de Armários</title>
-    <link rel="stylesheet" href="style/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Móveis Planejados - Transformamos seu espaço com elegância</title>
     <meta name="description"
-        content="Catálogo de estilos de armários planejados com descrições. Filtros por categoria e contato via WhatsApp." />
+        content="Móveis planejados sob medida para sua casa. Cozinhas, banheiros, closets e muito mais. Orçamento grátis e qualidade garantida.">
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- HERO -->
-    <header class="hero">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="image/novalogo.jpg" alt="Mobile Móveis Planejados" class="logo">
+                </div>
+                <button class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#inicio" class="nav-link">Início</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#portfolio" class="nav-link">Portfólio</a>
+                    <a href="#processo" class="nav-link">Processo</a>
+                    <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
-            <img src="image/logo2.png" alt="Logo da empresa" class="logo">
-            <h1>Transformamos seu espaço com móveis planejados</h1>
-            <a href="https://api.whatsapp.com/send?phone=556493387411&text=Olá! Gostaria de solicitar um orçamento."
-                target="_blank" class="btn-cta">
-                📲 Pedir Orçamento
-            </a>
-
-            <!-- MENU DE NAVEGAÇÃO -->
-            <nav class="menu">
-                <a href="#banheiros">Banheiros</a>
-                <a href="#cozinha">Cozinha</a>
-                <a href="#painel-sala">Painel de Sala</a>
-                <a href="#painel-cama">Painel de Cama</a>
-                <a href="#guarda-roupa">Guarda-Roupa</a>
-                <a href="#closet">Closet</a>
-                <a href="#portas">Portas</a>
-            </nav>
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Transformamos seu <span class="highlight">espaço</span>
+                    com móveis planejados
+                </h1>
+                <p class="hero-subtitle">
+                    Projetos únicos, sob medida e com a qualidade que você merece.
+                    Mais de 500 projetos realizados com excelência.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://api.whatsapp.com/send?phone=55649387411&text=Olá! Gostaria de solicitar um orçamento gratuito."
+                        target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        Orçamento Grátis
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary">
+                        <i class="fas fa-images"></i>
+                        Ver Projetos
+                    </a>
+                </div>
+            </div>
         </div>
-    </header>s
+        <div class="hero-scroll">
+            <span>Role para baixo</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-    <!-- SEÇÕES -->
-    <section id="banheiros" class="armarios">
-        <h2>Banheiros</h2>
-        <div class="armarios-grid">
-            <div class="armario-card">
-                <img src="image/banheiro1.jpeg" alt="Gabinete moderno para banheiro">
-                <h3>Gabinete Moderno</h3>
-                <p>Linhas retas, acabamento clean e aproveitamento total do espaço.</p>
+    <!-- Por que nos escolher -->
+    <section id="sobre" class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por que nos escolher?</h2>
+                <p class="section-subtitle">Qualidade, experiência e atendimento personalizado</p>
             </div>
-            <div class="armario-card">
-                <img src="image/banhero2.jpeg" alt="Gabinete suspenso">
-                <h3>Gabinete Suspenso</h3>
-                <p>Praticidade e sofisticação, ideal para banheiros pequenos.</p>
-            </div>
-            <div class="armario-card">
-                <img src="image/banheiro3.jpeg" alt="Gabinete clássico">
-                <h3>Gabinete Clássico</h3>
-                <p>Acabamento em madeira nobre, trazendo elegância atemporal.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Qualidade Premium</h3>
+                    <p>Materiais de primeira linha e acabamento impecável em todos os projetos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Prazo Garantido</h3>
+                    <p>Cumprimos rigorosamente os prazos acordados, sem surpresas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Projeto Personalizado</h3>
+                    <p>Cada móvel é único, projetado especialmente para seu espaço.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garantia Total</h3>
+                    <p>Garantia de 2 anos em todos os móveis e serviços prestados.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Suporte Completo</h3>
+                    <p>Acompanhamento desde o projeto até a instalação final.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Preço Justo</h3>
+                    <p>Orçamentos transparentes e condições de pagamento flexíveis.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="cozinha" class="armarios">
-        <h2>Cozinha</h2>
-        <div class="armarios-grid">
-            <div class="armario-card">
-                <img src="image/cozinha1.jpeg" alt="Cozinha planejada moderna">
-                <h3>Cozinha Moderna</h3>
-                <p>Design funcional e elegante, aproveitando cada espaço da sua cozinha.</p>
+    <!-- Portfólio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Projetos</h2>
+                <p class="section-subtitle">Conheça alguns dos nossos trabalhos realizados</p>
             </div>
-            <div class="armario-card">
-                <img src="image/cozinha2.jpeg" alt="Cozinha clássica">
-                <h3>Cozinha Clássica</h3>
-                <p>Acabamento tradicional com madeira nobre e detalhes sofisticados.</p>
+
+            <!-- Categoria: Banheiros -->
+            <div class="portfolio-category">
+                <h3 class="category-title">
+                    <i class="fas fa-bath"></i>
+                    Banheiros
+                </h3>
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-btn-prev" data-category="banheiros">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel" data-category="banheiros">
+                        <div class="carousel-track">
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/banheiro1.jpeg" alt="Gabinete moderno para banheiro"
+                                        loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/banheiro1.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Gabinete Moderno</h4>
+                                    <p>Linhas retas, acabamento clean e aproveitamento total do espaço.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/banhero2.jpeg" alt="Gabinete suspenso" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/banhero2.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Gabinete Suspenso</h4>
+                                    <p>Praticidade e sofisticação, ideal para banheiros pequenos.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/banheiro3.jpeg" alt="Gabinete clássico" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/banheiro3.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Gabinete Clássico</h4>
+                                    <p>Perfil facetato, trazendo elegância.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-btn-next" data-category="banheiros">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
-            <div class="armario-card">
-                <img src="image/cozinha3.jpeg" alt="Cozinha compacta">
-                <h3>Cozinha Compacta</h3>
-                <p>Ideal para apartamentos pequenos, mantendo funcionalidade e estilo.</p>
+
+            <!-- Categoria: Cozinhas -->
+            <div class="portfolio-category">
+                <h3 class="category-title">
+                    <i class="fas fa-utensils"></i>
+                    Cozinhas
+                </h3>
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-btn-prev" data-category="cozinhas">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel" data-category="cozinhas">
+                        <div class="carousel-track">
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/cozinha1.jpeg" alt="Cozinha planejada moderna" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/cozinha1.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Cozinha Moderna</h4>
+                                    <p>Design funcional e elegante, aproveitando cada espaço da sua cozinha.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/cozinha2.jpeg" alt="Cozinha clássica" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/cozinha2.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Cozinha Clássica</h4>
+                                    <p>Acabamento em porta na cava , sem uso de perfil.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/cozinha3.jpeg" alt="Cozinha compacta" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/cozinha3.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Cozinha Compacta</h4>
+                                    <p>Torre quente, ideal para fornos e microondas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-btn-next" data-category="cozinhas">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categoria: Painéis de Sala -->
+            <div class="portfolio-category">
+                <h3 class="category-title">
+                    <i class="fas fa-tv"></i>
+                    Painéis de Sala
+                </h3>
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-btn-prev" data-category="paineis-sala">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel" data-category="paineis-sala">
+                        <div class="carousel-track">
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/tv1.jpeg" alt="Painel moderno para sala" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/tv1.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Painel Moderno</h4>
+                                    <p>Design minimalista e sofisticado para valorizar sua sala de estar.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/tv2.jpeg" alt="Painel clássico para sala" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/tv2.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Painel Clássico</h4>
+                                    <p>Detalhes elegantes e acabamento refinado que trazem aconchego.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/tv3.jpeg" alt="Painel multifuncional" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/tv3.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Painel Multifuncional</h4>
+                                    <p>Espaços inteligentes para TV, decoração e organização.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-btn-next" data-category="paineis-sala">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categoria: Guarda-roupas -->
+            <div class="portfolio-category">
+                <h3 class="category-title">
+                    <i class="fas fa-tshirt"></i>
+                    Guarda-roupas
+                </h3>
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-btn-prev" data-category="guarda-roupas">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel" data-category="guarda-roupas">
+                        <div class="carousel-track">
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/roupa1.jpeg" alt="Guarda-roupa moderno" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/roupa1.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Guarda-roupa Moderno</h4>
+                                    <p>Espaço otimizado e portas deslizantes com acabamento premium.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="image/roupa2.jpeg" alt="Guarda-roupa clássico" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/roupa2.jpeg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Guarda-roupa Clássico</h4>
+                                    <p>Detalhes refinados e materiais nobres, design atemporal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-btn-next" data-category="guarda-roupas">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categoria: Closets -->
+            <div class="portfolio-category">
+                <h3 class="category-title">
+                    <i class="fas fa-home"></i>
+                    Closets
+                </h3>
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-btn-prev" data-category="closets">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel" data-category="closets">
+                        <div class="carousel-track">
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="images/closet1.jpg" alt="Closet moderno" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/closet1.jpg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Closet Moderno</h4>
+                                    <p>Design aberto, prateleiras e gavetas bem distribuídas.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-card">
+                                <div class="card-image">
+                                    <img src="images/closet2.jpg" alt="Closet clássico" loading="lazy">
+                                    <div class="card-overlay">
+                                        <button class="view-btn" data-image="images/closet2.jpg">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Closet Clássico</h4>
+                                    <p>Acabamento elegante, ideal para quem quer sofisticação.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-btn-next" data-category="closets">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="painel-sala" class="armarios">
-        <h2>Painel de Sala</h2>
-        <div class="armarios-grid">
-            <div class="armario-card">
-                <img src="image/tv1.jpeg" alt="Painel moderno para sala">
-                <h3>Painel Moderno</h3>
-                <p>Design minimalista e sofisticado para valorizar sua sala de estar.</p>
+    <!-- Processo de Trabalho -->
+    <section id="processo" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Como Trabalhamos</h2>
+                <p class="section-subtitle">Processo transparente e organizado do início ao fim</p>
             </div>
-            <div class="armario-card">
-                <img src="image/tv2.jpeg" alt="Painel clássico para sala">
-                <h3>Painel Clássico</h3>
-                <p>Detalhes elegantes e acabamento refinado que trazem aconchego.</p>
-            </div>
-            <div class="armario-card">
-                <img src="image/tv3.jpeg" alt="Painel multifuncional">
-                <h3>Painel Multifuncional</h3>
-                <p>Espaços inteligentes para TV, decoração e organização.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="painel-cama" class="armarios">
-        <h2>Painel de Cama</h2>
-        <div class="armarios-grid">
-            <div class="armario-card">
-                <img src="image/painel1.jpeg" alt="Painel de cama moderno">
-                <h3>Painel Moderno</h3>
-                <p>Design clean, aproveitamento inteligente do espaço do quarto.</p>
-            </div>
-            <div class="armario-card">
-                <img src="image/painel2.jpeg" alt="Painel de cama clássico">
-                <h3>Painel Clássico</h3>
-                <p>Madeira de alta qualidade e acabamento elegante para seu quarto.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="guarda-roupa" class="armarios">
-        <h2>Guarda-Roupa</h2>
-        <div class="armarios-grid">
-            <div class="armario-card">
-                <img src="image/roupa1.jpeg" alt="Guarda-roupa moderno">
-                <h3>Moderno</h3>
-                <p>Espaço otimizado e portas deslizantes com acabamento premium.</p>
-            </div>
-            <div class="armario-card">
-                <img src="image/roupa2.jpeg" alt="Guarda-roupa clássico">
-                <h3>Clássico</h3>
-                <p>Detalhes refinados e materiais nobres, design atemporal.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="closet" class="armarios">
-        <h2>Closet</h2>
-        <div class="armarios-grid">
-            <div class="armario-card">
-                <img src="image/closet1.jpg" alt="Closet moderno">
-                <h3>Moderno</h3>
-                <p>Design aberto, prateleiras e gavetas bem distribuídas.</p>
-            </div>
-            <div class="armario-card">
-                <img src="image/closet2.jpg" alt="Closet clássico">
-                <h3>Clássico</h3>
-                <p>Acabamento elegante, ideal para quem quer sofisticação.</p>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consulta Inicial</h3>
+                        <p>Visitamos seu espaço, entendemos suas necessidades e apresentamos ideias iniciais.</p>
+                        <span class="step-duration">1-2 dias</span>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Projeto 3D</h3>
+                        <p>Criamos o projeto detalhado em 3D para você visualizar exatamente como ficará.</p>
+                        <span class="step-duration">3-5 dias</span>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Aprovação e Contrato</h3>
+                        <p>Após sua aprovação, formalizamos o contrato com prazos e valores definidos.</p>
+                        <span class="step-duration">1 dia</span>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Produção</h3>
+                        <p>Fabricamos seus móveis com materiais de qualidade e acabamento perfeito.</p>
+                        <span class="step-duration">15-25 dias</span>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Instalação</h3>
+                        <p>Nossa equipe instala tudo com cuidado e deixa seu espaço pronto para usar.</p>
+                        <span class="step-duration">1-5 dias</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="portas" class="armarios">
-        <h2>Portas</h2>
-        <div class="armarios-grid">
-            <div class="armario-card">
-                <img src="image/porta.jpeg" alt="Porta moderna">
-                <h3>Moderna</h3>
-                <p>Porta planejada com acabamento premium e detalhes minimalistas.</p>
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O que nossos clientes dizem</h2>
+                <p class="section-subtitle">Mais de 500 clientes satisfeitos</p>
             </div>
-            <div class="armario-card">
-                <img src="image/porta2.jpeg" alt="Porta clássica">
-                <h3>Clássica</h3>
-                <p>Design tradicional, madeira nobre e elegância garantida.</p>
+            <div class="testimonials-carousel">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excelente trabalho! Ficou exatamente como imaginei. A qualidade dos materiais e o acabamento
+                            são impecáveis."</p>
+                        <div class="testimonial-author">
+                            <strong>Maria Silva</strong>
+                            <span>Cozinha Planejada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Profissionais muito competentes. Cumpriram o prazo e o resultado superou minhas
+                            expectativas."</p>
+                        <div class="testimonial-author">
+                            <strong>João Santos</strong>
+                            <span>Closet Completo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Atendimento excepcional desde o primeiro contato. Recomendo para todos que querem
+                            qualidade."</p>
+                        <div class="testimonial-author">
+                            <strong>Ana Costa</strong>
+                            <span>Banheiro Planejado</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- RODAPÉ -->
+    <!-- Contato/CTA -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Pronto para transformar seu espaço?</h2>
+                    <p>Solicite seu orçamento gratuito e sem compromisso. Nossa equipe está pronta para atendê-lo!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(64) 9 9338-7411</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@mobilemoveis.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Goiânia - GO</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-cta">
+                        <a href="https://api.whatsapp.com/send?phone=556493387411&text=Olá! Gostaria de solicitar um orçamento gratuito."
+                            target="_blank" class="btn btn-primary btn-large">
+                            <i class="fab fa-whatsapp"></i>
+                            Solicitar Orçamento Grátis
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form class="form" id="contact-form">
+                        <h3>Ou preencha o formulário</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Seu nome</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone">Seu telefone</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Selecione o serviço</option>
+                                <option value="cozinha">Cozinha Planejada</option>
+                                <option value="banheiro">Banheiro Planejado</option>
+                                <option value="closet">Closet</option>
+                                <option value="guarda-roupa">Guarda-roupa</option>
+                                <option value="painel">Painel de TV</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                            <label for="service">Tipo de serviço</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4"></textarea>
+                            <label for="message">Mensagem (opcional)</label>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>© 2025 Mobile Móveis Planejados </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo2.png" alt="Mobile Móveis Planejados" class="footer-logo">
+                    <p>Transformando espaços com móveis planejados de qualidade há mais de 10 anos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#portfolio">Cozinhas Planejadas</a></li>
+                        <li><a href="#portfolio">Banheiros Planejados</a></li>
+                        <li><a href="#portfolio">Closets</a></li>
+                        <li><a href="#portfolio">Guarda-roupas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (64) 9 9338-7411</li>
+                        <li><i class="fas fa-envelope"></i> contato@mobilemoveis.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Goiânia - GO</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mobile Móveis Planejados.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" id="lightbox-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-next" id="lightbox-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script src="script/script.js"></script>
 </body>
 
