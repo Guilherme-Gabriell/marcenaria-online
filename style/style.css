@@ -1,0 +1,162 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(135deg, rgba(43, 88, 118, 0.9), rgba(78, 67, 118, 0.9)), url("../image/bg-marcenaria.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero .logo {
+    width: 250px;
+    /* logo maior */
+    max-width: 95%;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Botão CTA */
+.btn-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cta:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* MENU DE NAVEGAÇÃO */
+.menu {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.menu a {
+    background: #fff;
+    color: #2b5876;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.menu a:hover {
+    background: #2b5876;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* SEÇÃO ARMÁRIOS */
+.armarios {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.armarios h2 {
+    font-size: 2rem;
+    color: #2b5876;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.armarios h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Grid de cards */
+.armarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.armario-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.armario-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.armario-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.armario-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4e4376;
+}
+
+.armario-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+/* RODAPÉ */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #2b5876;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
