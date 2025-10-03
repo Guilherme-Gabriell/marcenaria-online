@@ -800,6 +800,7 @@ body {
     color: var(--white);
     background: url('../images/imgdefundo.jpg') center/cover no-repeat;
 }
+
 .contact::before {
     content: '';
     position: absolute;
@@ -810,14 +811,17 @@ body {
     background: rgba(43, 88, 118, 0.3);
     z-index: 0;
 }
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl);
     align-items: center;
-    position: relative; /* garante que fique acima do overlay */
+    position: relative;
+    /* garante que fique acima do overlay */
     z-index: 1;
 }
+
 .contact-info h2 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     margin-bottom: var(--spacing-md);
@@ -845,6 +849,16 @@ body {
     color: var(--accent-light);
     width: 20px;
 }
+
+.contact span {
+    color: var(--white);
+}
+
+.contact span:hover {
+    color: var(--accent-light);
+    cursor: pointer;
+}
+
 
 /* ===== FORM ===== */
 .contact-form {
