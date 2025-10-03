@@ -541,7 +541,7 @@ function initContactForm() {
 
             // Codificar mensagem para URL
             const encodedMessage = encodeURIComponent(whatsappMessage);
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=556493087411&text=${encodedMessage}`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=556493387411&text=${encodedMessage}`;
 
             // Abrir WhatsApp
             window.open(whatsappUrl, '_blank');
